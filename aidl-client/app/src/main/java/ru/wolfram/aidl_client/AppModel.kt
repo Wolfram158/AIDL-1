@@ -1,4 +1,4 @@
-package ru.wolfram.aidl_app.presentation
+package ru.wolfram.aidl_client
 
 import android.content.ComponentName
 import android.content.Context
@@ -39,7 +39,9 @@ class AppModel {
     }
 
     fun bindService(context: Context) {
-        Intent(context, SortService::class.java).also { intent ->
+        Intent("ru.wolfram.aidl_app.AIDL").also { intent ->
+            intent.component =
+                ComponentName("ru.wolfram.aidl_app", "ru.wolfram.aidl_app.presentation.SortService")
             context.bindService(intent, connection, Context.BIND_AUTO_CREATE)
         }
     }

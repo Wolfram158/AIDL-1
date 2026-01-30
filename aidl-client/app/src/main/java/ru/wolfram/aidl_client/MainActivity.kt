@@ -1,4 +1,4 @@
-package ru.wolfram.aidl_app.presentation
+package ru.wolfram.aidl_client
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
